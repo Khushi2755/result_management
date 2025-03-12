@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Result Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="background"></div>
+
+    <!-- Header Section -->
+    <header>
+        <img src="images/image.png" alt="IIIT Trichy" class="header-img">
+    </header>
+
+    <!-- Sidebar for Notifications -->
+    <aside class="sidebar">
+        <h3>Notifications</h3>
+        <ul class="notifications">
+            <li>New exam guidelines released!</li>
+            <li>CT1 Results will be out on March 15.</li>
+            <li>End-Sem Exam schedule announced.</li>
+            <li>CT2 exam centers updated.</li>
+        </ul>
+
+        <h3>Exam Dates</h3>
+        <ul class="datesheets">
+            <li class="dropdown-container">
+                <a href="#" id="ct1-datesheet">CT1 Datesheet</a>
+                <ul class="dropdown">
+                    <li><a href="pdf/CT1.pdf" target="_blank">Even semester 2024-25 (B.Tech I)</a></li>
+                    <li><a href="pdf/CT-1.pdf" target="_blank">Even semester 2024-25 (B.Tech VIII, VI, IV)</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">CT2 Datesheet</a></li>
+            <li><a href="#">End-Sem Datesheet</a></li>
+        </ul>
+    </aside>
+
+    <!-- Login Box Positioned Above Coordinator -->
+    <div class="login-box">
+        <h3>Login</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="validateLogin()">Login</button>
+        <div class="google-login">
+            <button class="google-btn">
+                <img src="images/google-logo.png" alt="Google Logo" class="google-logo">
+                Continue with Google
+            </button>
+        </div>
+    </div>
+    
+    
+
+
+ <!-- Sidebar for Notifications -->
+ <aside class="leftbar">
+    <h3>About IIIT Trichy</h3>
+    <p>
+        Indian Institute of Information Technology Tiruchirappalli (IIIT Trichy) is a premier institution focused on 
+        delivering quality education in the field of Information Technology. Established under the IIIT Act, 
+        it is recognized as an Institute of National Importance.
+    </p>
+
+    <h3>Contact Us</h3>
+    <ul class="contact-info">
+        <li> Phone: +91 431 250 0539</li>
+        <li> Email: info@iiitt.ac.in</li>
+        <li> Website: <a href="https://www.iiitt.ac.in" target="_blank">www.iiitt.ac.in</a></li>
+        <li> Address: IIITT Campus, Tiruchirappalli, Tamil Nadu - 620015</li>
+    </ul>
+</aside>
+
+
+    <!-- Coordinator Information Box -->
+    <div class="info-box">
+        <h2>Exam Cell Coordinator</h2>
+        <div class="coordinator-container">
+            <div class="coordinator-text">
+                <p><strong>Ex: Go-JEK Tech. Inviting possible industry-academic collaborations, inbox for discussions.</strong></p>
+                <p>I completed my PhD in Computer Science & Engineering at the Indian Institute of Technology Ropar. My PhD project focused on Human Brain Mapping using BOLD fMRI, aiming to improve reproducibility in multi-site fMRI data and reduce inter-scanner variability.</p>
+                <p>Before my PhD, I worked as a Research Assistant at IIT Bombay, focusing on Open Source Software in Science and Engineering Education (Python Group).</p>
+                <p><strong>Specialties:</strong> Neuroimage Processing & Analysis, Data Analysis, Instruction Design, Course Content Development.</p>
+                <p><strong>Technical Skills:</strong> C, C++, Python, GNU/Linux, Machine Learning.</p>
+            </div>
+            <img src="images/anoop.jpg" alt="Anoop Jacob Thomas" class="coordinator-img">
+        </div>
+        <p class="coordinator-below-text">Dr. Anoop Jacob Thomas | Exam Cell Coordinator | IIIT Tiruchirappalli</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Indian Institute of Information Technology, Tiruchirappalli. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <select id="userType">
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="email" id="email" placeholder="Enter IIITT Email" required>
+        <button onclick="validateLogin()">Login</button>
+        <p id="error-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        h1 {
+            color: #2a3d66;
+            margin-bottom: 20px;
+        }
+
+        .semester-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .semester-box {
+            width: 150px;
+            height: 150px;
+            background-color: #4CAF50;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background 0.3s ease;
+            position: relative;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .semester-box:hover {
+            background-color: #45a049;
+        }
+
+        /* Dropdown Styling */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border-radius: 8px;
+            margin-top: 5px;
+            padding: 10px;
+            width: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+            transition: background 0.3s ease;
+            text-align: left;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+
+    <div class="semester-container">
+        <!-- Semester 1 -->
+        <div class="semester-box" onclick="toggleDropdown('sem1')">
+            Semester 1
+            <div class="dropdown" id="sem1">
+                <a href="results/sem1_ct1.html">CT1</a>
+                <a href="results/sem1_ct2.html">CT2</a>
+                <a href="results/sem1_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 2 -->
+        <div class="semester-box" onclick="toggleDropdown('sem2')">
+            Semester 2
+            <div class="dropdown" id="sem2">
+                <a href="results/sem2_ct1.html">CT1</a>
+                <a href="results/sem2_ct2.html">CT2</a>
+                <a href="results/sem2_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 3 -->
+        <div class="semester-box" onclick="toggleDropdown('sem3')">
+            Semester 3
+            <div class="dropdown" id="sem3">
+                <a href="results/sem3_ct1.html">CT1</a>
+                <a href="results/sem3_ct2.html">CT2</a>
+                <a href="results/sem3_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 4 -->
+        <div class="semester-box" onclick="toggleDropdown('sem4')">
+            Semester 4
+            <div class="dropdown" id="sem4">
+                <a href="results/sem4_ct1.html">CT1</a>
+                <a href="results/sem4_ct2.html">CT2</a>
+                <a href="results/sem4_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 5 -->
+        <div class="semester-box" onclick="toggleDropdown('sem5')">
+            Semester 5
+            <div class="dropdown" id="sem5">
+                <a href="results/sem5_ct1.html">CT1</a>
+                <a href="results/sem5_ct2.html">CT2</a>
+                <a href="results/sem5_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 6 -->
+        <div class="semester-box" onclick="toggleDropdown('sem6')">
+            Semester 6
+            <div class="dropdown" id="sem6">
+                <a href="results/sem6_ct1.html">CT1</a>
+                <a href="results/sem6_ct2.html">CT2</a>
+                <a href="results/sem6_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 7 -->
+        <div class="semester-box" onclick="toggleDropdown('sem7')">
+            Semester 7
+            <div class="dropdown" id="sem7">
+                <a href="results/sem7_ct1.html">CT1</a>
+                <a href="results/sem7_ct2.html">CT2</a>
+                <a href="results/sem7_endsem.html">End-Sem</a>
+            </div>
+        </div>
+
+        <!-- Semester 8 -->
+        <div class="semester-box" onclick="toggleDropdown('sem8')">
+            Semester 8
+            <div class="dropdown" id="sem8">
+                <a href="results/sem8_ct1.html">CT1</a>
+                <a href="results/sem8_ct2.html">CT2</a>
+                <a href="results/sem8_endsem.html">End-Sem</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            // Hide other open dropdowns
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach((dropdown) => {
+                if (dropdown.id !== id) {
+                    dropdown.style.display = 'none';
+                }
+            });
+
+            // Toggle the selected dropdown
+            const dropdown = document.getElementById(id);
+            dropdown.style.display =
+                dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.semester-box')) {
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach((dropdown) => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        };
+    </script>
+</body>
+</html>

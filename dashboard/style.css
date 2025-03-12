@@ -1,0 +1,553 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: white;
+    padding: 10px 0;
+}
+
+.header-img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Full-Screen Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('images/IIITT.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black  !important;
+    padding: 12px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar for Notifications & Exam Date Sheets */
+/* Sidebar for Notifications & Exam Date Sheets */
+.sidebar {
+    position: relative;
+    left: 20px;
+    top: 60px;
+    width: 320px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.6)!important; /* Light Blue with 60% transparency */
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(172, 23, 23) !important; /* Text remains readable */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3) !important;
+    /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Sidebar Headings */
+.sidebar h3 {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgb(14, 12, 12);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+/* Notification List */
+.notifications, .datesheets {
+    list-style: none;
+    padding: 10px 0;
+    max-height: 220px;
+}
+
+/* Style the notifications list */
+.notifications {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px;  /* Adjusts indentation */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* Style individual list items */
+.notifications li {
+    margin-bottom: 8px; /* Adds spacing between items */
+    color: black;
+}
+
+
+/* Date Sheet Links */
+.datesheets li a {
+    display: block;
+    color: rgb(11, 10, 11);
+    text-decoration: none;
+    padding: 8px 0;
+    font-weight: bold;
+}
+
+.datesheets li a:hover {
+    text-decoration: underline;
+}
+
+/* Info Box */
+.info-box {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    background: #002147;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -200px;
+    margin-bottom: 80px;
+    text-align: justify;
+    font-size: 16px;
+    color:white;
+}
+
+.info-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 22px;
+}
+
+/* Center the Box in the Middle of the Page */
+.page-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #f5f7fa; /* Light background for contrast */
+}
+
+/* Styling the Coordinator Section */
+.info-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 900px;
+    width: 90%;
+    font-family: 'Inter', sans-serif;
+    border-left: 6px solid #002147; /* Dark blue side accent */
+}
+
+/* Header Styling */
+.info-box h2 {
+    text-align: left;
+    font-size: 26px;
+    color: darkblue;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* Grid Layout for Alignment */
+.coordinator-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Coordinator Text */
+.coordinator-text {
+    font-size: 15px;
+    color: black;
+    line-height: 1.7;
+}
+
+/* Bold Sections */
+.coordinator-text strong {
+    color: darkred;
+    font-weight: 600;
+}
+
+/* Coordinator Image */
+.coordinator-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border: 3px solid #002147;
+}
+
+/* Text Below the Box */
+.coordinator-below-text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 10px;
+    color: black;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coordinator-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .coordinator-img {
+        margin: auto;
+    }
+}
+
+
+/* Text Below the Box */
+.coordinator-below-text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+}
+
+
+/* Below Image Text */
+.coordinator-below-text {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 10px;
+}
+/* Dropdown styles */
+/* Dropdown styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    text-align: left;
+}
+
+.dropdown-btn:hover {
+    background: #0056b3;
+}
+
+/* Dropdown Content */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 8px;
+    list-style: none;
+    padding: 8px 0;
+    min-width: 220px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Dropdown Items */
+.dropdown li {
+    padding: 12px 16px;
+    transition: background 0.3s;
+}
+
+/* Dropdown Links */
+.dropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    font-weight: 500;
+}
+
+/* Hover Effects */
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover .dropdown {
+    display: block;
+}
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center; /* Pushes content to sides */
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Sidebar (Notifications) */
+
+.leftbar {
+    position: relative;
+    left: 1120px;
+    top: -380px;
+    width: 320px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.6)!important; /* Light Blue with 60% transparency */
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(211, 30, 30) !important; /* Text remains readable */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3) !important;
+    /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Sidebar Headings */
+.leftbar h3 {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+p, .contact-info li {
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Ensuring the website link remains blue */
+a {
+    text-decoration: none;
+    color: #0e599b;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.contact-info li {
+    color: #000;
+    margin-bottom: 5px;  /* Reduced gap between points */
+    line-height: 1.3;    /* Slightly tighter line spacing */
+}
+
+/* Notification List */
+.notifications, .datesheets {
+    list-style: none;
+    padding: 20px 0;
+    max-height: 220px;
+}
+
+/* Style the notifications list */
+.notifications {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px;  /* Adjusts indentation */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* Style individual list items */
+.notifications li {
+    margin-bottom: 10px; /* Adds spacing between items */
+    color: rgb(22, 19, 19);
+}
+
+
+/* Date Sheet Links */
+.datesheets li a {
+    display: block;
+    color: rgb(14, 61, 128);
+    text-decoration: none;
+    padding: 8px 0;
+    font-weight: bold;
+}
+
+.datesheets li a:hover {
+    text-decoration: underline;
+}
+.login-box {
+    background: rgba(255, 255, 255, 0.6); /* Transparent white */
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    position: absolute; 
+    top: 300px; /* Adjust position */
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Content starts from the top */
+    height: 250px; /* Increased height to allow more space below */
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-box .input-field,
+.login-box .login-button {
+    margin-bottom: 10px; /* Space between inputs */
+}
+
+.extra-content {
+    margin-top: auto; /* Push additional content to the bottom */
+    text-align: center;
+    padding-top: 20px; /* Create visible spacing */
+}
+.login-box input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+/* Login Button */
+.login-box button {
+    width: 90%;
+    padding: 8px;
+    background: navy;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: darkblue;
+}
+
+.login-box .google-login {
+    margin-top: 15px;  /* Adds space between Login and Google button */
+}
+
+.login-box .google-btn {
+    width: 90%;
+    background-color: #ffffff;
+    color: #5f6368;
+    border: 1px solid #dadce0;
+    border-radius: 25px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.login-box .google-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #c6c6c6;
+}
+.google-logo {
+    width: 25px;
+    height: 25px;
+    margin-right:2px;
+}
+.body {
+    background: url('./images/background.jpg') no-repeat center center/cover;
+    min-height: 100vh;  /* Ensures full-screen coverage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.semester-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust grid layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.semester-box {
+    width: 150px;
+    height: 150px;
+    background:cadetblue;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text color for better visibility */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.semester-box:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
